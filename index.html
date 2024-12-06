@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container text-center">
+        <div class="title text-center d-inline-block my-5">
+            <h1>Bookmarker</h1>
+        </div>
+        <div class="bookmark">
+            <div class="my-3 bookmarkTitle">
+                <h2 class="d-inline"><i class="fa-solid fa-bookmark me-2"></i>Bookmark your favorite sites<i class="fa-solid fa-bookmark ms-2"></i></h2>
+            </div>
+            <div class="text-start">
+                <h6 class="fw-bold"><i class="fa-solid fa-book-bookmark me-2"></i>Site Name</h6>
+                <input type="text" class="w-100 form-control" placeholder="Bookmark Name" id="siteName" onchange="validateSiteNameInput()">
+            </div>
+            <div class="text-start mt-4">
+                <h6 class="fw-bold"><i class="fa-solid fa-link me-2"></i>Site URL</h6>
+                <input type="text" class="w-100 form-control" placeholder="Website URL" id="siteLink" onchange="validateURLInput()">
+            </div>
+            <button class="my-4 px-5 py-2" id="submit" onclick="add()">Submit</button>
+        </div>
+        <input onkeyup="search()" type="text" placeholder="Search" class="mt-4 form-control w-50 mx-auto" id="search">
+        <table class="table mt-4">
+            <thead>
+                <tr>
+                    <th scope="col">Index</th>
+                    <th scope="col">Website Name</th>
+                    <th scope="col">Visit</th>
+                    <th scope="col">Update</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
